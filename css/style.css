@@ -29,7 +29,7 @@ header {
   top: 0;
   left: 0;
   justify-content: center;
-  z-index: 5;
+  z-index: 0;
   -webkit-box-shadow: 0 5px 80px -10px rgba(0, 0, 0, 0.5);
   box-shadow: 0 5px 80px -10px rgba(0, 0, 0, 0.5);
 }
@@ -59,13 +59,17 @@ header .navbar {
 }
 
 .overlay11 {
+
+  z-index: 1;
+  justify-content: center;
+}
+.overlay111 {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 11111;
+  z-index: 11111111111;
   justify-content: center;
 }
-
 #myVideo {
   width: 85%;
 }
@@ -2265,6 +2269,56 @@ section.page-container {
   transform: rotateX(-180deg);
 }
 
+#maintwo {
+ transition: margin-left .5s;
+ padding: 16px;
+}
+
+.sidenav {
+ text-align: center;
+ height: 100%;
+ width: 0;
+ position: fixed;
+ z-index: 1;
+ top: 0;
+ left: 0;
+ background-color:rgba(0,0,0,0.5);
+ overflow-x: hidden;
+ transition: 0.5s;
+ padding-top: 60px;
+}
+
+.sidenav a {
+ padding: 8px 8px 8px 32px;
+ text-decoration: none;
+ font-size: 25px;
+ color: #fff;
+ display: block;
+ transition: 0.3s;
+ padding: 30px;
+}
+
+.sidenav a:hover,
+.offcanvas a:focus {
+ color: #f1f1f1;
+}
+
+.closebtn {
+ position: absolute;
+ top: 0;
+ right: 25px;
+ font-size: 36px !important;
+ margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+ .sidenav {
+  padding-top: 15px;
+ }
+ .sidenav a {
+  font-size: 18px;
+ }
+}
 /*** Oblique Flip ***/
 .button-flip-oblique .front {
   background-image: linear-gradient(90deg, #125688, #ded1c1);
@@ -2771,7 +2825,7 @@ p.reference a {
 .form-wrap {
   position: relative;
   margin-bottom: 3em;
-  z-index: 2;
+  z-index: 0;
   padding: 20px;
   background: #fff;
   -webkit-box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.2);
